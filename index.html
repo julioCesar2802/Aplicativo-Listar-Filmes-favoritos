@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Filmes 🎬</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header class="hero">
+    <div class="overlay"></div> <div class="hero-content">
+        <h1>CineTracker</h1>
+        <p>Sua coleção pessoal de filmes. Avalie, organize e nunca mais esqueça o que assistir.</p>
+        <a href="#filmeForm" class="btn-hero">Adicionar Novo Filme</a>
+    </div>
+</header>
+
+    <main>
+        <section class="form-section">
+            <form id="filmeForm">
+                <input type="hidden" id="filmeId"> <div class="input-group">
+                    <label>Título do Filme</label>
+                    <input type="text" id="titulo" placeholder="Ex: Interestelar" required>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label>Ano</label>
+                        <input type="number" id="ano" placeholder="2014" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Gênero</label>
+                        <select id="genero">
+                            <option value="Ação">Ação</option>
+                            <option value="Comédia">Comédia</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Ficção">Ficção</option>
+                            <option value="Terror">Terror</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Link da Imagem (Poster)</label>
+                    <input type="url" id="poster" placeholder="https://..." required>
+                </div>
+
+                <button type="submit" id="btnSalvar">Adicionar Filme</button>
+                <button type="button" id="btnCancelar" class="hidden" onclick="limparFormulario()">Cancelar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="listaFilmes" class="grid-container">
+            </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
